@@ -35,11 +35,14 @@
   display: none;
 }
 
-.add_note_{
-  display:none;
+.add_note_ {
+  display: none;
+}
+
+.add_todos_ {
+  display: none;
 }
 
 .show {
   display: block;
 }
-

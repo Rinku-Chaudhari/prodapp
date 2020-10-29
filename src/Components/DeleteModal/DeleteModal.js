@@ -6,7 +6,9 @@ import db from "../../firebase";
 import Context from "../../Context/Context";
 
 const DeleteModal = ({ title, setInfo, setIsSuccess, close }) => {
-  const { username, setMode } = useContext(Context);
+  const { username, setMode, pinnedItems, setPinnedItems } = useContext(
+    Context
+  );
 
   const Delete = () => {
     close();
@@ -16,6 +18,11 @@ const DeleteModal = ({ title, setInfo, setIsSuccess, close }) => {
       .then(() => {
         setInfo("Page deleted Successfully!");
         setIsSuccess(true);
+        const filteredPinnnedItems = pinnedItems.filter((item) => {
+          return item !== title;
+        });
+        setPinnedItems(filteredPinnnedItems);
+        localStorage.setItem("pinned", JSON.stringify(filteredPinnnedItems));
 
         setTimeout(() => {
           setMode("Pages");

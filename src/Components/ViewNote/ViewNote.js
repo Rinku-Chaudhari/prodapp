@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ViewNote.css";
 
 import { FiTrash2, GrEdit, TiDeleteOutline } from "react-icons/all";
 import db from "../../firebase";
-
 import firebase from "firebase/app";
 
 const ViewNote = ({
@@ -29,14 +28,11 @@ const ViewNote = ({
   };
 
   return (
-    <div className="view_note">
+    <div className="view_todo">
       <section>
         <section className="top">
           <h2>{title}</h2>
           <section>
-            <button>
-              <GrEdit />
-            </button>
             <button onClick={Delete}>
               <FiTrash2 />
             </button>
@@ -44,21 +40,7 @@ const ViewNote = ({
         </section>
 
         <p className="des">{description}</p>
-        <p>{content}</p>
-      </section>
-
-      <section className="delete_confirmation">
-        <p>Do you surely want to delete {title}?</p>
-        <section>
-          <button onClick={Delete}>
-            <FiTrash2 />
-            <p style={{ color: "red" }}>Delete</p>
-          </button>
-          <button onClick={ToggleBox}>
-            <TiDeleteOutline />
-            <p>Cancel</p>
-          </button>
-        </section>
+        <p>{typeof content !== "object" ? content : ""}</p>
       </section>
     </div>
   );

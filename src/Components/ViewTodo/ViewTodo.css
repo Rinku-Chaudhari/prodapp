@@ -1,10 +1,18 @@
-.view_note .top {
+.view_todo .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.view_note .top button {
+.view_todo .top [type="checkbox"] {
+  margin-top: -20px;
+}
+
+.view_todo .top p {
+  margin-top: -10px;
+}
+
+.view_todo .top button {
   border: none;
   background: none;
   padding: 0;
@@ -14,13 +22,18 @@
   outline: none;
 }
 
-.view_note .des {
+.view_todo .todos div {
+  display: flex;
+  align-items: center;
+}
+
+.view_todo .des {
   color: tomato;
   margin-top: -12px;
   font-size: 14px;
   font-style: italic;
 }
 
-.view_note section section section button:last-child {
+.view_todo section section section button:last-child {
   color: red;
 }

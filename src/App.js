@@ -9,12 +9,14 @@ function App() {
   //settings and userData
   const THEME = localStorage.getItem("theme");
   const FONT = localStorage.getItem("font");
+  const PINNED = JSON.parse(localStorage.getItem("pinned"));
 
   const [font, setFont] = useState(FONT ? FONT : "arial");
   const [theme, setTheme] = useState(THEME ? THEME : "skyblue");
   const [mode, setMode] = useState("Pages");
   const [hideSidebar, setHidesidebar] = useState(false);
   const [username, setUsername] = useState("rinku");
+  const [pinnedItems, setPinnedItems] = useState(PINNED ? PINNED : []);
 
   return (
     <div className={hideSidebar ? "sidebar_hidden App" : "App"}>
@@ -23,11 +25,13 @@ function App() {
           theme,
           font,
           mode,
+          pinnedItems,
           hideSidebar,
           setTheme,
           setFont,
           setMode,
           setHidesidebar,
+          setPinnedItems,
           username,
           setUsername,
         }}
