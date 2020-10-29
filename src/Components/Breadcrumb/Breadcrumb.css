@@ -1,0 +1,13 @@
+.breadcrumb {
+  width: 93%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.breadcrumb .make_link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}

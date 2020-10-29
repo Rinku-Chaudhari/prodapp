@@ -1,0 +1,17 @@
+.home button {
+  display: flex;
+  align-items: center;
+  background: inherit;
+  justify-content: space-between;
+  width: 100%;
+  outline: none;
+  padding-left: 20px;
+  font-size: 15px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.home button:hover {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}

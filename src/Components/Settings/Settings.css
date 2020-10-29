@@ -1,0 +1,23 @@
+.settings img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.settings button {
+  border: none;
+  outline: none;
+  background: inherit;
+  display: flex;
+  align-items: center;
+  padding: 5px 300px 5px 10px;
+  border-radius: 5px;
+}
+
+.settings button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.settings button p {
+  margin-left: 10px;
+}

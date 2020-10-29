@@ -1,0 +1,41 @@
+.sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  background: white;
+  overflow-y: auto;
+}
+
+.sidebar h4 {
+  padding-left: 30px;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  background: inherit;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.sidebar button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button p {
+  margin-left: 10px;
+}
+
+.sidebar .active-coral {
+  background: rgba(255, 127, 80, 0.1);
+  border-right: solid 4px rgba(255, 127, 80, 1);
+}
+
+.sidebar .active-skyblue {
+  background: rgba(25, 181, 254, 0.1);
+  border-right: solid 4px rgba(25, 181, 254, 1);
+}

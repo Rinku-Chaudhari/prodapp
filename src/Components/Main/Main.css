@@ -1,0 +1,17 @@
+.main {
+  width: inherit;
+  min-width: inherit;
+}
+
+.main .settings_page,
+.add_page_,
+.homepage,
+.page_view_ {
+  width: 90%;
+  padding: 20px;
+  margin: auto;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}

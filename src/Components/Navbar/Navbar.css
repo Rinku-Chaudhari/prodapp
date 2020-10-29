@@ -1,0 +1,33 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  width: inherit;
+  margin-left: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar .right button {
+  font-size: 15px;
+}
+
+.navbar img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.navbar button {
+  border: none;
+  background: inherit;
+  outline: none;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}

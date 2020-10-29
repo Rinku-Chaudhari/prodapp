@@ -1,0 +1,45 @@
+.page_view .top_bar {
+  display: flex;
+  align-items: center;
+}
+
+.page_view .top_bar button {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  outline: none;
+  height: 33px;
+  margin-right: 10px;
+  padding: 2px 8px;
+}
+
+.page_view .top_bar button:hover {
+  background: #f8f8ff;
+}
+
+.page_view .top_bar button:last-child {
+  background: #cc3300;
+  border: solid 1px #cc3300;
+  color: white;
+}
+
+.page_view .top_bar button:last-child:hover {
+  background: red;
+  border: Solid 1px red;
+}
+
+.delete_modal_ {
+  display: none;
+}
+
+.add_note_{
+  display:none;
+}
+
+.show {
+  display: block;
+}
+
