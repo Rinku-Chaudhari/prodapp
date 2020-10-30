@@ -1,6 +1,6 @@
 ## Productivity app using react.js and firestore realtime db.
 
-### LIVE: https://www.prodapp-111.web.app
+### LIVE: https://prodapp-111.web.app
 
 
 ### Features
