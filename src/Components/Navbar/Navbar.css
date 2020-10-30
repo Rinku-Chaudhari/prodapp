@@ -31,3 +31,32 @@
   display: flex;
   align-items: center;
 }
+
+.dropdown {
+  display: none;
+  position: fixed;
+  top: 40px;
+  background: #f8f8ff;
+  width: 100px;
+  height: 70px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  right: 20px;
+  font-size: 15px;
+}
+
+.navbar .dropdown button {
+  font-size: 15px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.navbar .dropdown button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.show {
+  display: block;
+}

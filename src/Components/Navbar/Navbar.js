@@ -1,11 +1,33 @@
 import React, { useContext } from "react";
 import "./Navbar.css";
 
-import { BiMenu, BiCaretDown } from "react-icons/all";
+import { BiMenu, BiCaretDown, GoSignOut } from "react-icons/all";
 import Context from "../../Context/Context";
+import firebase from "firebase/app";
 
 const Navbar = () => {
-  const { setHidesidebar } = useContext(Context);
+  const { setHidesidebar, profilePic } = useContext(Context);
+
+  const toggleDropdown = () => {
+    const dropdown = document.querySelector(".dropdown");
+    dropdown.classList.toggle("show");
+  };
+
+  const Logout = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        localStorage.setItem("username", "");
+        localStorage.setItem("profilePic", "");
+        localStorage.setItem("pinned", "[]");
+        localStorage.setItem("font", "arial");
+        window.location.reload();
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
 
   return (
     <div className="navbar">
@@ -16,9 +38,16 @@ const Navbar = () => {
       </section>
 
       <section className="right">
-        <button>
-          <img src="https://bit.ly/31DRHAA" alt="profile_img" />
+        <button onClick={toggleDropdown}>
+          <img src={profilePic} alt="profile_img" />
           <BiCaretDown />
+        </button>
+      </section>
+
+      <section className="dropdown">
+        <button onClick={Logout}>
+          <GoSignOut />
+          <p>Log out</p>
         </button>
       </section>
     </div>

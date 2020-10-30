@@ -2,7 +2,7 @@ import React from "react";
 import "./ViewTodo.css";
 
 import { FiTrash2 } from "react-icons/all";
-import db from "../../firebase";
+import { db } from "../../firebase";
 import firebase from "firebase/app";
 
 const ViewTodo = ({
@@ -21,8 +21,6 @@ const ViewTodo = ({
         [contentId]: firebase.firestore.FieldValue.delete(),
       });
   };
-
-  const ToggleBox = () => {};
 
   const checkUncheck = (val, d) => {
     const todoIndex = content.findIndex((e) => {

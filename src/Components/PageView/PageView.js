@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./PageView.css";
 
 import Context from "../../Context/Context";
-import db from "../../firebase";
+import { db } from "../../firebase";
 import { TiPin, FiTrash2, GoPlus } from "react-icons/all";
 import DeleteModal from "../DeleteModal/DeleteModal";
 import Alertbox from "../Alertbox/Alertbox";
@@ -16,7 +16,9 @@ const PageView = () => {
   const [pageType, setPageType] = useState("");
   const [info, setInfo] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-  const { username, mode, pinnedItems, setPinnedItems } = useContext(Context);
+  const { username, mode, pinnedItems, setPinnedItems, font } = useContext(
+    Context
+  );
   const indexOfSlash = mode.indexOf("/");
 
   const toggleDeleteModal = () => {
@@ -66,7 +68,7 @@ const PageView = () => {
           setPageContent(filteredFinalData);
         }
       });
-  }, [mode]);
+  }, [mode, indexOfSlash, username]);
 
   const pinUnpin = () => {
     if (!pinnedItems.includes(mode.slice(indexOfSlash + 2 - 1))) {
@@ -104,7 +106,7 @@ const PageView = () => {
   });
 
   return (
-    <div className="page_view">
+    <div className="page_view" style={{ fontFamily: font }}>
       <section className="top_bar">
         <button
           style={pageType !== "todos" ? { display: "none" } : null}

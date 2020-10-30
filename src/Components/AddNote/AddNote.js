@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./AddNote.css";
 
 import { GoPlus } from "react-icons/all";
-import db from "../../firebase";
+import { db } from "../../firebase";
 import Context from "../../Context/Context";
 
 const AddNote = ({ pageName, setIsSuccess, setInfo, close }) => {

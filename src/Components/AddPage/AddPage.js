@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./AddPage.css";
 
 import { GoPlus, MdCancel } from "react-icons/all";
-import db from "../../firebase";
+import { db } from "../../firebase";
 import Context from "../../Context/Context";
 import Alertbox from "../Alertbox/Alertbox";
 

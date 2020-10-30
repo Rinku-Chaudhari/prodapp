@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./AddTodos.css";
 
-import db from "../../firebase";
+import { db } from "../../firebase";
 import Context from "../../Context/Context";
 import { GoPlus } from "react-icons/all";
 
@@ -80,19 +80,19 @@ const AddTodos = ({ pageName, setInfo, setIsSuccess, close }) => {
   return (
     <div className="add_todos">
       <div className="form">
-        <label htmlFor="note_title">Title</label>
+        <label htmlFor="todo_title">Title</label>
         <input
           type="text"
           name=""
-          id="note_title"
+          id="todo_title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label htmlFor="note_description">Description</label>
+        <label htmlFor="todo_description">Description</label>
         <input
           type="text"
           name=""
-          id="note_description"
+          id="todo_description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />

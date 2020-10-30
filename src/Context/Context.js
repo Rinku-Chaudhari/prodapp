@@ -4,6 +4,7 @@ const Context = React.createContext({
   theme: "",
   font: "",
   mode: "",
+  profilePic: "",
   pinnedItems: [],
   hideSidebar: false,
   setTheme: () => {},
@@ -11,6 +12,7 @@ const Context = React.createContext({
   setMode: () => {},
   setHidesidebar: () => {},
   setPinnedItems: () => {},
+  setProfilePic: () => {},
   username: "",
   setUsername: () => {},
 });

@@ -29,7 +29,7 @@ const Settings = () => {
         </button>
 
         <button
-          style={theme === "coral" ? { color:"tomato" } : null}
+          style={theme === "coral" ? { color: "tomato" } : null}
           onClick={() => SET_THEME("coral")}
         >
           <img src="https://bit.ly/3juM0Ls" alt="coral" />
@@ -40,14 +40,17 @@ const Settings = () => {
       <section className="font">
         <h4>Font</h4>
         <button
-          style={font === "arial" ? { color:"tomato" } : null}
+          style={font === "arial" ? { color: "tomato" } : null}
           onClick={() => SET_FONT("arial")}
         >
           <img src="https://bit.ly/3kxUJ0A" alt="default" />
           <p>Default</p>
         </button>
 
-        <button>
+        <button
+          style={font === "Rubik" ? { color: "tomato" } : null}
+          onClick={() => SET_FONT("Rubik")}
+        >
           <img src="https://bit.ly/3kxUJ0A" alt="pro" />
           <p>Pro</p>
         </button>

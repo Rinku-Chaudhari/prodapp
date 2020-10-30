@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./DeleteModal.css";
 
 import { FiTrash2, TiDeleteOutline } from "react-icons/all";
-import db from "../../firebase";
+import { db } from "../../firebase";
 import Context from "../../Context/Context";
 
 const DeleteModal = ({ title, setInfo, setIsSuccess, close }) => {

@@ -3,7 +3,7 @@ import "./Home.css";
 
 import Context from "../../Context/Context";
 import { BiCaretRight } from "react-icons/all";
-import db from "../../firebase";
+import { db } from "../../firebase";
 
 const Home = () => {
   const [pages, setPages] = useState([]);

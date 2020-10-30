@@ -1,8 +1,8 @@
 import React from "react";
 import "./ViewNote.css";
 
-import { FiTrash2, GrEdit, TiDeleteOutline } from "react-icons/all";
-import db from "../../firebase";
+import { FiTrash2 } from "react-icons/all";
+import { db } from "../../firebase";
 import firebase from "firebase/app";
 
 const ViewNote = ({
@@ -20,11 +20,6 @@ const ViewNote = ({
       .update({
         [contentId]: firebase.firestore.FieldValue.delete(),
       });
-  };
-
-  const ToggleBox = () => {
-    const deleteConfirmBox = document.querySelector(".delete_confirmation");
-    deleteConfirmBox.classList.toggle("show");
   };
 
   return (
